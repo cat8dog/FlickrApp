@@ -1,25 +1,156 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OLz-T3-X6J">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="FlickrApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrL-y1-SaG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="sd0-Xm-hrB" kind="embed" id="e6c-EF-1Gh"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="I7F-Qt-9V1">
+                        <barButtonItem key="leftBarButtonItem" id="t9i-vJ-tww">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sHL-Zs-sWV">
+                                <rect key="frame" x="16" y="-28" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="i" backgroundImage="button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="1GX-dU-x0C">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MDy-oz-73E">
+                                <rect key="frame" x="274" y="-28" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="f" backgroundImage="button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="667.73333333333335" y="378.66666666666669"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HTG-NE-Ufb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OLz-T3-X6J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b3S-3c-VTs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="m6C-94-78L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiU-GS-A9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300.80000000000001" y="378.66666666666669"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="JD7-7x-uMn">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="sd0-Xm-hrB" customClass="ImageViewController" customModule="FlickrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x0k-Ny-QF2"/>
+                        <viewControllerLayoutGuide type="bottom" id="5oR-Yf-mrg"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zzK-nt-ioc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUh-AO-9RC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="Ofn-ef-X30" kind="embed" id="w9N-Xs-lW5"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YorkMills" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-jG-hab">
+                                <rect key="frame" x="0.0" y="0.0" width="380" height="780"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE COOL GIRLS OF YORK MILLS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPY-j0-3tQ">
+                                <rect key="frame" x="0.0" y="79" width="380" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="T8c-P9-c7V"/>
+                                    <constraint firstAttribute="height" constant="38" id="j6G-if-94M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cUh-AO-9RC" firstAttribute="leading" secondItem="IPY-j0-3tQ" secondAttribute="trailing" constant="-380" id="3Fj-ba-sZn"/>
+                            <constraint firstItem="5oR-Yf-mrg" firstAttribute="top" secondItem="cUh-AO-9RC" secondAttribute="bottom" id="3gI-zU-6sR"/>
+                            <constraint firstAttribute="centerX" secondItem="cUh-AO-9RC" secondAttribute="centerX" id="AbW-8H-Qmh"/>
+                            <constraint firstItem="fvB-jG-hab" firstAttribute="top" secondItem="IPY-j0-3tQ" secondAttribute="bottom" constant="-117" id="H7X-aF-ziE"/>
+                            <constraint firstItem="fvB-jG-hab" firstAttribute="centerX" secondItem="cUh-AO-9RC" secondAttribute="centerX" constant="-110" id="I6v-7z-0Nw"/>
+                            <constraint firstItem="fvB-jG-hab" firstAttribute="top" secondItem="cUh-AO-9RC" secondAttribute="bottom" constant="-600" id="JK3-h1-85Z"/>
+                            <constraint firstItem="cUh-AO-9RC" firstAttribute="leading" secondItem="zzK-nt-ioc" secondAttribute="leadingMargin" constant="-16" id="L6w-2K-Smd"/>
+                            <constraint firstItem="cUh-AO-9RC" firstAttribute="top" secondItem="x0k-Ny-QF2" secondAttribute="bottom" id="SLf-wQ-cW3"/>
+                            <constraint firstAttribute="centerY" secondItem="cUh-AO-9RC" secondAttribute="centerY" id="TMz-Jr-W6Z"/>
+                            <constraint firstItem="cUh-AO-9RC" firstAttribute="top" secondItem="x0k-Ny-QF2" secondAttribute="bottom" id="Wtr-Z5-h7a"/>
+                            <constraint firstItem="cUh-AO-9RC" firstAttribute="leading" secondItem="fvB-jG-hab" secondAttribute="trailing" constant="-380" id="aCB-QC-a4t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cUh-AO-9RC" secondAttribute="trailing" constant="-16" id="iGh-7A-0av"/>
+                            <constraint firstItem="fvB-jG-hab" firstAttribute="centerY" secondItem="cUh-AO-9RC" secondAttribute="centerY" constant="90" id="lF9-6M-pPJ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVX-pD-Dz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="1078"/>
+        </scene>
+        <!--Story View Controller-->
+        <scene sceneID="a3J-yn-RA0">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ofn-ef-X30" customClass="StoryViewController" customModule="FlickrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ynZ-VY-ow9"/>
+                        <viewControllerLayoutGuide type="bottom" id="zMl-ez-dyI"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="y4Y-D4-pfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdJ-XT-vcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029.3333333333333" y="1078.2533333333333"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="YorkMills" width="640" height="1136"/>
+        <image name="button" width="100" height="100"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

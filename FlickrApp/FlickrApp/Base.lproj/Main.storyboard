@@ -119,6 +119,9 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <segue destination="Ofn-ef-X30" kind="push" identifier="pushStory" id="ui6-bu-bbX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVX-pD-Dz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,6 +130,7 @@
         <!--Story View Controller-->
         <scene sceneID="a3J-yn-RA0">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdJ-XT-vcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ofn-ef-X30" customClass="StoryViewController" customModule="FlickrApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ynZ-VY-ow9"/>
@@ -138,8 +142,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="CRJ-By-iDq"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PdJ-XT-vcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.3333333333333" y="1078.2533333333333"/>
         </scene>
@@ -153,4 +157,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ui6-bu-bbX"/>
+    </inferredMetricsTieBreakers>
 </document>

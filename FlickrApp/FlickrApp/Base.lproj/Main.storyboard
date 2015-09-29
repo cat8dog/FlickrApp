@@ -92,7 +92,7 @@
                                     <barButtonItem title="contact" id="Ind-xS-dQ6"/>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClP-Ko-BTB">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClP-Ko-BTB">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="UP7-gN-Osy">
@@ -101,7 +101,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="YorkMills" translatesAutoresizingMaskIntoConstraints="NO" id="z6l-n8-4hv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="YorkMills" translatesAutoresizingMaskIntoConstraints="NO" id="z6l-n8-4hv">
                                 <rect key="frame" x="0.0" y="44" width="606" height="512"/>
                             </imageView>
                         </subviews>

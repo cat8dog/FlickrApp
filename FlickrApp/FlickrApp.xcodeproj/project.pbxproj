@@ -15,6 +15,7 @@
 		282D83B81BB35E9000ABEC7A /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D83B71BB35E9000ABEC7A /* ImageViewController.swift */; };
 		282D83BA1BB35F1800ABEC7A /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D83B91BB35F1800ABEC7A /* StoryViewController.swift */; };
 		282D83BC1BB35FAF00ABEC7A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D83BB1BB35FAF00ABEC7A /* RootViewController.swift */; };
+		282D84FB1BB9CCCC00ABEC7A /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D84FA1BB9CCCC00ABEC7A /* FavouritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		282D83B71BB35E9000ABEC7A /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		282D83B91BB35F1800ABEC7A /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		282D83BB1BB35FAF00ABEC7A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		282D84FA1BB9CCCC00ABEC7A /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesViewController.swift; path = ../FavouritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				282D83BB1BB35FAF00ABEC7A /* RootViewController.swift */,
 				282D83B71BB35E9000ABEC7A /* ImageViewController.swift */,
 				282D83B91BB35F1800ABEC7A /* StoryViewController.swift */,
+				282D84FA1BB9CCCC00ABEC7A /* FavouritesViewController.swift */,
 				282D839B1BB35DF000ABEC7A /* Main.storyboard */,
 				282D839E1BB35DF000ABEC7A /* Images.xcassets */,
 				282D83A01BB35DF000ABEC7A /* LaunchScreen.xib */,
@@ -221,6 +224,7 @@
 				282D83BA1BB35F1800ABEC7A /* StoryViewController.swift in Sources */,
 				282D83B81BB35E9000ABEC7A /* ImageViewController.swift in Sources */,
 				282D83BC1BB35FAF00ABEC7A /* RootViewController.swift in Sources */,
+				282D84FB1BB9CCCC00ABEC7A /* FavouritesViewController.swift in Sources */,
 				282D83981BB35DF000ABEC7A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +423,7 @@
 				282D83B31BB35DF000ABEC7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		282D83B41BB35DF000ABEC7A /* Build configuration list for PBXNativeTarget "FlickrAppTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				282D83B61BB35DF000ABEC7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

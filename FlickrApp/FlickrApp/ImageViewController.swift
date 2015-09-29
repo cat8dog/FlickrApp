@@ -1,15 +1,11 @@
-//
-//  ImageViewController.swift
-//  FlickrApp
-//
-//  Created by Catherine Reyto on 2015-09-23.
-//  Copyright (c) 2015 Catherine Reyto. All rights reserved.
-//
 
 import UIKit
 
 class ImageViewController: UIViewController {
 
+    
+    @IBOutlet var showStory: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +17,9 @@ class ImageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
 
+    
     /*
     // MARK: - Navigation
 

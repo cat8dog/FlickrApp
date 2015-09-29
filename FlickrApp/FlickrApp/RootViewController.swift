@@ -10,6 +10,8 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    @IBOutlet var pushStoryView: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +33,7 @@ class RootViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

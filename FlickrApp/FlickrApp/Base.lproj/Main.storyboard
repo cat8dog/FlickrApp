@@ -6,6 +6,58 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="u2Y-Rl-BbA">
+            <objects>
+                <viewController id="FfP-HV-WDK" customClass="InfoViewController" customModule="FlickrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N52-Ye-Bup"/>
+                        <viewControllerLayoutGuide type="bottom" id="v2D-lv-L1E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q5u-yr-Ohq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info: Should be a collectionView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kj-kj-e5c">
+                                <rect key="frame" x="51" y="180" width="469" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tFb-kV-ZsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="838"/>
+        </scene>
+        <!--Favourites View Controller-->
+        <scene sceneID="u3i-Tu-dUF">
+            <objects>
+                <viewController id="QF6-no-Bso" customClass="FavouritesViewController" customModule="FlickrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e74-dw-LVj"/>
+                        <viewControllerLayoutGuide type="bottom" id="zVs-22-yvz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WGm-44-14M">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favourites: Should be a tableView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fC4-49-VHA">
+                                <rect key="frame" x="69" y="134" width="493" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cS-rL-qeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597" y="64"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="haV-qv-pZh">
             <objects>
@@ -36,11 +88,28 @@
                             <constraint firstItem="lCH-50-J2z" firstAttribute="top" secondItem="HuA-xA-iis" secondAttribute="bottom" id="dFb-Pj-HtS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qBq-1q-Y8l"/>
+                    <navigationItem key="navigationItem" id="qBq-1q-Y8l">
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="gkv-zy-S6z">
+                            <color key="tintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="FfP-HV-WDK" kind="show" id="qbJ-2m-ZEl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Favourites" id="LXn-mq-F19">
+                            <color key="tintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="QF6-no-Bso" kind="show" id="j63-oX-Egr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="showFavourites" destination="LXn-mq-F19" id="4Hy-mS-hXN"/>
+                        <outlet property="showInfoi" destination="qBq-1q-Y8l" id="DEX-YD-CbL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32d-7b-iQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1587" y="730"/>
+            <point key="canvasLocation" x="1597" y="847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Jg-c7-Imd">
@@ -58,7 +127,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsK-wy-25L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="730"/>
+            <point key="canvasLocation" x="273" y="-38"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="rE4-38-Xrz">
@@ -78,32 +147,27 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YorkMills" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-ww-SO3">
                                         <rect key="frame" x="8" y="8" width="398" height="720"/>
                                     </imageView>
+                                    <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6HW-My-lj8">
+                                        <rect key="frame" x="-93" y="68" width="600" height="600"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bJs-MX-Jry">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="light"/>
+                                    </visualEffectView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB4-H1-B6I">
                                         <rect key="frame" x="113" y="601" width="188" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="188" id="Jlf-Jr-4xQ"/>
                                         </constraints>
-                                        <state key="normal" title="STORY">
+                                        <state key="normal" title="STORY Long press">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Rim-AJ-b1T" kind="show" id="UvD-za-PPH"/>
+                                        </connections>
                                     </button>
-                                    <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6HW-My-lj8">
-                                        <rect key="frame" x="-93" y="68" width="600" height="600"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bJs-MX-Jry">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ud-H1-oMP">
-                                                    <rect key="frame" x="0.0" y="-74" width="600" height="600"/>
-                                                    <connections>
-                                                        <segue destination="Rim-AJ-b1T" kind="embed" id="NiG-8z-2BO"/>
-                                                    </connections>
-                                                </containerView>
-                                            </subviews>
-                                        </view>
-                                        <blurEffect style="light"/>
-                                    </visualEffectView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -132,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCu-qG-V1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="812"/>
+            <point key="canvasLocation" x="2225" y="838"/>
         </scene>
         <!--Story View Controller-->
         <scene sceneID="Lqh-jh-6PJ">
@@ -143,11 +207,11 @@
                         <viewControllerLayoutGuide type="bottom" id="KmP-hr-ekh"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aMG-bZ-Ze3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIL-mF-yqb">
-                                <rect key="frame" x="45" y="8" width="511" height="584"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIL-mF-yqb">
+                                <rect key="frame" x="45" y="71" width="325" height="584"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -156,7 +220,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.17999999999999999" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KmP-hr-ekh" firstAttribute="top" secondItem="HIL-mF-yqb" secondAttribute="bottom" constant="8" id="0tl-JS-ETL"/>
+                            <constraint firstItem="KmP-hr-ekh" firstAttribute="top" secondItem="HIL-mF-yqb" secondAttribute="bottom" constant="-55" id="0tl-JS-ETL"/>
                             <constraint firstItem="KmP-hr-ekh" firstAttribute="top" secondItem="HIL-mF-yqb" secondAttribute="bottom" id="5Xg-BK-OCd"/>
                             <constraint firstItem="HIL-mF-yqb" firstAttribute="leading" secondItem="aMG-bZ-Ze3" secondAttribute="leading" constant="8" id="64O-Tr-QZx"/>
                             <constraint firstItem="HIL-mF-yqb" firstAttribute="leading" secondItem="aMG-bZ-Ze3" secondAttribute="leadingMargin" constant="29" id="DIZ-cE-36i"/>
@@ -164,7 +228,7 @@
                             <constraint firstAttribute="trailing" secondItem="HIL-mF-yqb" secondAttribute="trailing" constant="8" id="JRt-zv-1YX"/>
                             <constraint firstItem="KmP-hr-ekh" firstAttribute="top" secondItem="HIL-mF-yqb" secondAttribute="bottom" constant="8" id="Y9u-1V-atM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HIL-mF-yqb" secondAttribute="trailing" constant="28" id="f0n-WI-eIT"/>
-                            <constraint firstItem="HIL-mF-yqb" firstAttribute="top" secondItem="MYO-xF-ktB" secondAttribute="bottom" multiplier="4" constant="8" id="iyJ-4V-y5U"/>
+                            <constraint firstItem="HIL-mF-yqb" firstAttribute="top" secondItem="MYO-xF-ktB" secondAttribute="bottom" multiplier="4" constant="-9" id="iyJ-4V-y5U"/>
                             <constraint firstItem="HIL-mF-yqb" firstAttribute="leading" secondItem="aMG-bZ-Ze3" secondAttribute="leadingMargin" constant="8" id="omz-ol-2IB"/>
                             <constraint firstItem="HIL-mF-yqb" firstAttribute="top" secondItem="MYO-xF-ktB" secondAttribute="bottom" constant="8" id="rao-ty-zRQ"/>
                             <constraint firstItem="HIL-mF-yqb" firstAttribute="top" secondItem="MYO-xF-ktB" secondAttribute="bottom" constant="101" id="t3Y-FA-ATU"/>
@@ -186,25 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPC-7M-GOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944" y="1624"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zEF-Cr-xOm">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Yuz-aP-8Ky" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pyP-2j-Ivg"/>
-                        <viewControllerLayoutGuide type="bottom" id="JmR-Tr-ueg"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ffh-93-6Py">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fmo-JJ-fI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
+            <point key="canvasLocation" x="1597" y="1618"/>
         </scene>
     </scenes>
     <resources>

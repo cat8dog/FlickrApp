@@ -1,19 +1,15 @@
 //
-//  RootViewController.swift
+//  InfoViewController.swift
 //  FlickrApp
 //
-//  Created by Catherine Reyto on 2015-09-23.
+//  Created by Catherine Reyto on 2015-09-29.
 //  Copyright (c) 2015 Catherine Reyto. All rights reserved.
 //
 
 import UIKit
 
-class RootViewController: UIViewController {
+class InfoViewController: UIViewController {
 
-    @IBOutlet var showFavourites: UIBarButtonItem!
-    @IBOutlet var showInfoi: UINavigationItem!
-    @IBOutlet var pushStoryView: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +31,5 @@ class RootViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    
 
 }

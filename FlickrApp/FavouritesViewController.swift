@@ -1,9 +1,10 @@
 
 import UIKit
 
-class FavouritesViewController: UIViewController {
+class FavouritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    // @IBOutlet var favouritesTable: UITableView!
    
+    @IBOutlet var favouritesTable: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,20 +16,20 @@ class FavouritesViewController: UIViewController {
 //        
 //        // Return the number of sections.
 //        return 1
-//    }
-//    
-//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        
-//        return 6
-//    }
-//    
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cellIdentifier = "Cell"
-//        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
-//        
-//        return cell
-//    
-//    }
+ //   }
+    
+   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 6
+    }
+    
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellIdentifier = "Cell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        
+        return cell
+    
+    }
 
 }
     

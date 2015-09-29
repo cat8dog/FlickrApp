@@ -3,6 +3,7 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
+    @IBOutlet var testArray: UITextView!
     
     @IBOutlet var showStory: UIButton!
     

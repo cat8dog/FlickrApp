@@ -9,8 +9,15 @@
 import UIKit
 
 
-class StoryViewController: UIViewController {
+class DisplayViewController: UIViewController {
     
+   // http://stackoverflow.com/questions/29582200/how-do-i-get-the-views-inside-a-container-in-swift
+    
+    private var embeddedViewController: StoryCollectionViewController!
+    
+    @IBAction func showStory(sender: AnyObject) {
+        println("STORY!")
+    }
   
     @IBOutlet var imageArray: UIImageView!
     
@@ -19,6 +26,7 @@ class StoryViewController: UIViewController {
     // counter = 0
 
     
+    @IBOutlet var storyContainer: UIView!
     
     @IBOutlet var testArray: UILabel!
     
@@ -27,7 +35,7 @@ class StoryViewController: UIViewController {
     var mockTitles = ["Day 44", "Day 45", "day 47", "day 48", "day 49"]
     
     var counter = 0
-  
+    //var storyAlpha:UIView = UIView(storyContainer)
     
     @IBAction func nextLabel(sender: AnyObject) {
         println("tapped!")
@@ -64,11 +72,23 @@ class StoryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(animated: Bool) {
+   //     self.embeddedViewController
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? StoryCollectionViewController
+            where segue.identifier == "EmbedSegue" {
+                self.embeddedViewController = vc
+        }
+    }
 
     /*
     // MARK: - Navigation

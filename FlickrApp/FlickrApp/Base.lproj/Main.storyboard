@@ -232,9 +232,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdH-dG-QKs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YorkMills" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-ww-SO3">
-                                        <rect key="frame" x="8" y="8" width="398" height="720"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB4-H1-B6I">
                                         <rect key="frame" x="113" y="601" width="188" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -245,6 +242,9 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YorkMills" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-ww-SO3">
+                                        <rect key="frame" x="8" y="8" width="398" height="720"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -302,11 +302,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLQ-cL-dms">
+                                <rect key="frame" x="149" y="158" width="305" height="357"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.17999999999999999" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="imageArray" destination="uLQ-cL-dms" id="vcy-Sl-QKS"/>
                         <outlet property="testArray" destination="4we-18-cZC" id="Ua0-hx-tdZ"/>
                     </connections>
                 </viewController>

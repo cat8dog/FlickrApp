@@ -8,7 +8,16 @@
 
 import UIKit
 
+
 class StoryViewController: UIViewController {
+    
+  
+    @IBOutlet var imageArray: UIImageView!
+    
+    var mockImages = ["day44.jpg", "day45.jpg", "day47.jpg", "day48.jpg", "day49.jpg"]
+    
+    // counter = 0
+
     
     
     @IBOutlet var testArray: UILabel!
@@ -16,16 +25,21 @@ class StoryViewController: UIViewController {
     //  @IBOutlet var showStory: UIButton!
     
     var mockTitles = ["Day 44", "Day 45", "day 47", "day 48", "day 49"]
-    var counter = 0
     
+    var counter = 0
+  
     
     @IBAction func nextLabel(sender: AnyObject) {
         println("tapped!")
         if counter >= mockTitles.count {
             counter = 0
         }
+        if counter >= mockImages.count {
+            counter = 0
+        }
         
         updateLabel()
+        updateImage()
         counter++
     }
     
@@ -37,6 +51,13 @@ class StoryViewController: UIViewController {
         println("\(chosenTitle)")
     }
 
+    func updateImage() {
+        var chosenImage: UIImage = UIImage (named: (mockImages[counter]))!
+        imageArray.image = chosenImage
+        println("\(chosenImage)")
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

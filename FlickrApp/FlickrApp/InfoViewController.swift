@@ -37,7 +37,7 @@ class InfoViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        println("Cell \(indexPath.row) selected")
+       // println("Cell \(indexPath)
     }
     
 

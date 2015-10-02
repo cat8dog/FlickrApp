@@ -12,7 +12,9 @@ class RootViewController: UIViewController {
 
     @IBOutlet var showFavourites: UIBarButtonItem!
     @IBOutlet var showInfoi: UINavigationItem!
-    @IBOutlet var pushStoryView: UIButton!
+
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

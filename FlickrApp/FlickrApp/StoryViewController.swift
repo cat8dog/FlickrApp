@@ -9,6 +9,33 @@
 import UIKit
 
 class StoryViewController: UIViewController {
+    
+    
+    @IBOutlet var testArray: UILabel!
+    
+    //  @IBOutlet var showStory: UIButton!
+    
+    var mockTitles = ["Day 44", "Day 45", "day 47", "day 48", "day 49"]
+    var counter = 0
+    
+    
+    @IBAction func nextLabel(sender: AnyObject) {
+        println("tapped!")
+        if counter >= mockTitles.count {
+            counter = 0
+        }
+        
+        updateLabel()
+        counter++
+    }
+    
+    
+    
+    func updateLabel() {
+        var chosenTitle = mockTitles[counter]
+        testArray.text = chosenTitle
+        println("\(chosenTitle)")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

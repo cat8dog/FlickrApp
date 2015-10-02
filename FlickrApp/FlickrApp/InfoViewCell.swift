@@ -14,3 +14,4 @@ class InfoViewCell: UICollectionViewCell {
 
     @IBOutlet var infoLabel: UILabel!
 }
+

@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Info View Controller-->
@@ -163,6 +162,9 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-rt-dEK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="Rim-AJ-b1T" kind="embed" id="E4T-hL-NA8"/>
+                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,6 +192,7 @@
                     <connections>
                         <outlet property="showFavourites" destination="LXn-mq-F19" id="4Hy-mS-hXN"/>
                         <outlet property="showInfoi" destination="qBq-1q-Y8l" id="DEX-YD-CbL"/>
+                        <outlet property="testArray" destination="4we-18-cZC" id="2Hu-1M-Rbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32d-7b-iQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -232,20 +235,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YorkMills" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-ww-SO3">
                                         <rect key="frame" x="8" y="8" width="398" height="720"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="TEST AREA FOR ARRAY" translatesAutoresizingMaskIntoConstraints="NO" id="STP-ak-9hd">
-                                        <rect key="frame" x="87" y="350" width="240" height="36"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6HW-My-lj8">
-                                        <rect key="frame" x="-93" y="68" width="600" height="600"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bJs-MX-Jry">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </view>
-                                        <blurEffect style="light"/>
-                                    </visualEffectView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB4-H1-B6I">
                                         <rect key="frame" x="113" y="601" width="188" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -255,9 +244,6 @@
                                         <state key="normal" title="STORY Long press">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="Rim-AJ-b1T" kind="show" id="UvD-za-PPH"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -281,10 +267,6 @@
                     </view>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <outlet property="showStory" destination="HB4-H1-B6I" id="bNr-1U-pTp"/>
-                        <outlet property="testArray" destination="STP-ak-9hd" id="OJs-Qq-q20"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCu-qG-V1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -299,46 +281,34 @@
                         <viewControllerLayoutGuide type="bottom" id="KmP-hr-ekh"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aMG-bZ-Ze3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIL-mF-yqb">
-                                <rect key="frame" x="45" y="71" width="325" height="584"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFw-sf-t43">
+                                <rect key="frame" x="117" y="103" width="181" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Next Title!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextLabel:" destination="zds-y6-4QT" eventType="touchUpInside" id="G5b-7C-w4J"/>
+                                    <action selector="nextLabel:" destination="Rim-AJ-b1T" eventType="touchUpInside" id="qx7-r9-wkh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4we-18-cZC">
+                                <rect key="frame" x="93" y="48" width="229" height="41"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.17999999999999999" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="KmP-hr-ekh" firstAttribute="top" secondItem="HIL-mF-yqb" secondAttribute="bottom" constant="-55" id="0tl-JS-ETL"/>
-                            <constraint firstItem="KmP-hr-ekh" firstAttribute="top" secondItem="HIL-mF-yqb" secondAttribute="bottom" id="5Xg-BK-OCd"/>
-                            <constraint firstItem="HIL-mF-yqb" firstAttribute="leading" secondItem="aMG-bZ-Ze3" secondAttribute="leading" constant="8" id="64O-Tr-QZx"/>
-                            <constraint firstItem="HIL-mF-yqb" firstAttribute="leading" secondItem="aMG-bZ-Ze3" secondAttribute="leadingMargin" constant="29" id="DIZ-cE-36i"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HIL-mF-yqb" secondAttribute="trailing" constant="8" id="Hfi-Ka-l4z"/>
-                            <constraint firstAttribute="trailing" secondItem="HIL-mF-yqb" secondAttribute="trailing" constant="8" id="JRt-zv-1YX"/>
-                            <constraint firstItem="KmP-hr-ekh" firstAttribute="top" secondItem="HIL-mF-yqb" secondAttribute="bottom" constant="8" id="Y9u-1V-atM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HIL-mF-yqb" secondAttribute="trailing" constant="28" id="f0n-WI-eIT"/>
-                            <constraint firstItem="HIL-mF-yqb" firstAttribute="top" secondItem="MYO-xF-ktB" secondAttribute="bottom" multiplier="4" constant="-9" id="iyJ-4V-y5U"/>
-                            <constraint firstItem="HIL-mF-yqb" firstAttribute="leading" secondItem="aMG-bZ-Ze3" secondAttribute="leadingMargin" constant="8" id="omz-ol-2IB"/>
-                            <constraint firstItem="HIL-mF-yqb" firstAttribute="top" secondItem="MYO-xF-ktB" secondAttribute="bottom" constant="8" id="rao-ty-zRQ"/>
-                            <constraint firstItem="HIL-mF-yqb" firstAttribute="top" secondItem="MYO-xF-ktB" secondAttribute="bottom" constant="101" id="t3Y-FA-ATU"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="64O-Tr-QZx"/>
-                                <exclude reference="Hfi-Ka-l4z"/>
-                                <exclude reference="JRt-zv-1YX"/>
-                                <exclude reference="omz-ol-2IB"/>
-                                <exclude reference="rao-ty-zRQ"/>
-                                <exclude reference="t3Y-FA-ATU"/>
-                                <exclude reference="5Xg-BK-OCd"/>
-                                <exclude reference="Y9u-1V-atM"/>
-                            </mask>
-                        </variation>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="testArray" destination="4we-18-cZC" id="Ua0-hx-tdZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPC-7M-GOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
